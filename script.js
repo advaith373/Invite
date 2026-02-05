@@ -23,3 +23,42 @@ function checkCode() {
     error.textContent = "Invalid access code.";
   }
 }
+async function submitTasks() {
+  const fileInput = document.getElementById("proofFile");
+  const status = document.getElementById("uploadStatus");
+
+  if (!fileInput.files.length) {
+    status.textContent = "Please upload a photo or video.";
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const formData = new FormData();
+  formData.append("file", file);
+
+  status.textContent = "Uploading proof...";
+
+  try {
+    const response = await fetch("http://localhost:3000/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.status === "uploaded") {
+      status.textContent = "Upload received. Analyzing...";
+      
+      // small delay for effect
+      setTimeout(() => {
+        document.getElementById("taskScreen").style.display = "none";
+        document.getElementById("lockScreen").classList.remove("hidden");
+      }, 2000);
+    } else {
+      status.textContent = "Upload failed. Try again.";
+    }
+
+  } catch (error) {
+    status.textContent = "Server error. Make sure backend is running.";
+  }
+}
