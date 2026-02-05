@@ -1,3 +1,8 @@
+function goToTasks() {
+  document.getElementById("warningScreen").style.display = "none";
+  document.getElementById("lockScreen").classList.remove("hidden");
+}
+
 const ACCESS_CODE = "INITIATE";
 
 function checkCode() {
