@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Restricted</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOCK SCREEN -->
+  <div class="lock-screen" id="lockScreen">
+    <h1>ACCESS RESTRICTED</h1>
+    <p>This invitation is not public.<br>Authorized freshers only.</p>
+
+    <input 
+      type="password" 
+      id="codeInput" 
+      placeholder="Enter access code" 
+    />
+    <button onclick="checkCode()">VERIFY</button>
+
+    <p class="hint">Hint: It was spoken, not written.</p>
+    <p class="error" id="errorMsg"></p>
+  </div>
+
+  <!-- UNLOCKED CONTENT -->
+  <div class="invite hidden" id="invite">
+    <h2>ACCESS GRANTED</h2>
+
+    <audio id="accessAudio" src="audio/access-granted.mp3"></audio>
+
+    <h1>FRESHERS NIGHT 2026</h1>
+
+    <img src="images/poster.jpg" alt="Freshers Poster" class="poster"/>
+
+    <div class="details">
+      <p>📅 Date: 14 Feb 2026</p>
+      <p>⏰ Time: 7:00 PM</p>
+      <p>📍 Venue: College Auditorium</p>
+      <p>👔 Dress Code: Black & Gold</p>
+    </div>
+
+    <a 
+      href="https://forms.gle/yourform" 
+      target="_blank" 
+      class="confirm-btn">
+      CONFIRM ENTRY
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
