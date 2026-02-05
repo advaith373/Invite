@@ -89,3 +89,16 @@ button:hover {
   text-decoration: none;
   font-weight: bold;
 }
+.screen {
+  text-align: center;
+  max-width: 420px;
+  padding: 30px;
+}
+
+.screen button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
