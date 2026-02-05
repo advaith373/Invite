@@ -2,10 +2,7 @@ function goToTasks() {
   document.getElementById("warningScreen").style.display = "none";
   document.getElementById("taskScreen").classList.remove("hidden");
 }
-function completeTasks() {
-  document.getElementById("taskScreen").style.display = "none";
-  document.getElementById("lockScreen").classList.remove("hidden");
-}
+
 
 const ACCESS_CODE = "INITIATE";
 
