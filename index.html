@@ -6,35 +6,37 @@
   <title>Access Restricted</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <!-- RESTRICTED WARNING SCREEN -->
-<div id="warningScreen" class="screen">
-  <h1>⚠ RESTRICTED WEBSITE</h1>
-  <p>
-    You are attempting to access a restricted portal.<br>
-    Unauthorized access is prohibited.
-  </p>
-
-  <button onclick="goToTasks()">BEGIN INITIATION</button>
-</div>
 
 <body>
-<!-- TASKS SCREEN -->
-<div id="taskScreen" class="screen hidden">
-  <h1>INITIATION TASKS</h1>
 
-  <p>Complete the following tasks to earn access.</p>
+  <!-- RESTRICTED WARNING SCREEN -->
+  <div id="warningScreen" class="screen">
+    <h1>⚠ RESTRICTED WEBSITE</h1>
+    <p>
+      You are attempting to access a restricted portal.<br>
+      Unauthorized access is prohibited.
+    </p>
 
-  <ul class="task-list">
-    <li>📸 Take a photo with your fresher ID</li>
-    <li>🕺 Record a 5-second fun video</li>
-    <li>🤝 Introduce yourself to one senior</li>
-  </ul>
+    <button onclick="goToTasks()">BEGIN INITIATION</button>
+  </div>
 
-  <button onclick="completeTasks()">SUBMIT TASKS</button>
-</div>
+  <!-- TASKS SCREEN -->
+  <div id="taskScreen" class="screen hidden">
+    <h1>INITIATION TASKS</h1>
+
+    <p>Complete the following tasks to earn access.</p>
+
+    <ul class="task-list">
+      <li>📸 Take a photo with your fresher ID</li>
+      <li>🕺 Record a 5-second fun video</li>
+      <li>🤝 Introduce yourself to one senior</li>
+    </ul>
+
+    <button onclick="completeTasks()">SUBMIT TASKS</button>
+  </div>
 
   <!-- LOCK SCREEN -->
- <div class="lock-screen hidden" id="lockScreen">
+  <div class="lock-screen hidden" id="lockScreen">
     <h1>ACCESS RESTRICTED</h1>
     <p>This invitation is not public.<br>Authorized freshers only.</p>
 
